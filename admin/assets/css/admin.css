@@ -1,0 +1,169 @@
+/* admin/assets/css/admin.css */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI;
+}
+
+body{
+    display:flex;
+    background:#0f172a;
+    color:white;
+}
+
+/* SIDEBAR */
+
+.sidebar{
+    width:260px;
+    height:100vh;
+    background:#111827;
+    padding:30px 20px;
+    position:fixed;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+    color:#00e5ff;
+    margin-bottom:40px;
+    text-align:center;
+}
+
+.sidebar ul{
+    list-style:none;
+}
+
+.sidebar ul li{
+    padding:18px;
+    margin-bottom:15px;
+    background:#1e293b;
+    border-radius:15px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.sidebar ul li:hover,
+.active{
+    background:#00e5ff;
+    color:black;
+}
+
+/* MAIN */
+
+.main-content{
+    margin-left:260px;
+    width:100%;
+    padding:30px;
+}
+
+/* TOPBAR */
+
+.topbar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:40px;
+}
+
+.topbar h1{
+    font-size:40px;
+}
+
+.admin-info{
+    background:#1e293b;
+    padding:15px 25px;
+    border-radius:50px;
+}
+
+/* CARDS */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:#1e293b;
+    padding:35px;
+    border-radius:25px;
+    text-align:center;
+}
+
+.card h2{
+    font-size:45px;
+    color:#00e5ff;
+    margin-bottom:10px;
+}
+
+/* PAGE */
+
+.page{
+    display:none;
+}
+
+.active-page{
+    display:block;
+}
+
+/* TABLE */
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:30px;
+    background:#1e293b;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+table th,
+table td{
+    padding:18px;
+    border-bottom:1px solid #334155;
+    text-align:left;
+}
+
+table th{
+    background:#00e5ff;
+    color:black;
+}
+
+/* SERVICES */
+
+.service-list{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+    margin-top:30px;
+}
+
+.service-item{
+    background:#1e293b;
+    padding:30px;
+    border-radius:20px;
+    font-size:22px;
+    text-align:center;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    .sidebar{
+        width:100%;
+        height:auto;
+        position:relative;
+    }
+
+    body{
+        flex-direction:column;
+    }
+
+    .main-content{
+        margin-left:0;
+    }
+
+}

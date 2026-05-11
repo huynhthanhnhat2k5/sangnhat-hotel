@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Đăng Nhập - Sang Nhất Hotel</title>
+
+    <link rel="stylesheet" href="assets/css/login.css">
+
+</head>
+
+<body>
+
+<!-- BACKGROUND -->
+
+<div class="background">
+
+    <img src="assets/images/background/login-bg.png">
+
+</div>
+
+<!-- LOGIN -->
+
+<div class="login-container">
+
+    <div class="login-box">
+
+        <!-- LOGO -->
+
+        <div class="logo">
+
+            SANG NHẤT HOTEL
+
+        </div>
+
+        <!-- TITLE -->
+
+        <h2>ĐĂNG NHẬP</h2>
+
+        <p class="sub-text">
+
+            Welcome back to Luxury Hotel
+
+        </p>
+
+        <!-- FORM -->
+
+        <form onsubmit="loginUser(event)">
+
+            <!-- EMAIL -->
+
+            <div class="input-box">
+
+                <label>Email</label>
+
+                <input 
+                    type="email"
+                    id="email"
+                    placeholder="Nhập email"
+                    required
+                >
+
+            </div>
+
+            <!-- PASSWORD -->
+
+            <div class="input-box">
+
+                <label>Mật khẩu</label>
+
+                <input 
+                    type="password"
+                    id="password"
+                    placeholder="Nhập mật khẩu"
+                    required
+                >
+
+            </div>
+
+            <!-- REMEMBER -->
+
+            <div class="remember">
+
+                <div>
+
+                    <input type="checkbox">
+
+                    Ghi nhớ đăng nhập
+
+                </div>
+
+                <a href="#">
+                    Quên mật khẩu?
+                </a>
+
+            </div>
+
+            <!-- BUTTON -->
+
+            <button type="submit" class="login-btn">
+
+                Đăng Nhập
+
+            </button>
+
+        </form>
+
+        <!-- DEMO ACCOUNT -->
+
+       <div class="demo-account">
+
+    <h3>Tài khoản Demo</h3>
+
+    <br>
+
+    <p>
+        ADMIN:
+    </p>
+
+    <p>
+        admin@sangnhathotel.com
+    </p>
+
+    <p>
+        Password: 123456
+    </p>
+
+    <br>
+
+    <p>
+        USER:
+    </p>
+
+    <p>
+        user@gmail.com
+    </p>
+
+    <p>
+        Password: 123456
+    </p>
+
+</div>
+
+        <!-- REGISTER -->
+
+        <div class="register">
+
+            Chưa có tài khoản?
+
+            <a href="#">
+                Đăng ký
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+function loginUser(event){
+
+    event.preventDefault();
+
+    // INPUT
+
+    const email =
+        document.getElementById("email").value;
+
+    const password =
+        document.getElementById("password").value;
+
+    // ADMIN ACCOUNT
+
+    const adminEmail =
+        "admin@sangnhathotel.com";
+
+    const adminPassword =
+        "123456";
+
+    // USER ACCOUNT
+
+    const userEmail =
+        "user@gmail.com";
+
+    const userPassword =
+        "123456";
+
+    // EMPTY
+
+    if(email.trim() === "" || password.trim() === ""){
+
+        alert("Vui lòng nhập đầy đủ thông tin!");
+
+        return;
+
+    }
+
+    // ADMIN LOGIN
+
+    if(email === adminEmail &&
+       password === adminPassword){
+
+        localStorage.setItem(
+            "isLogin",
+            "true"
+        );
+
+        localStorage.setItem(
+            "role",
+            "admin"
+        );
+
+        localStorage.setItem(
+            "username",
+            "Admin"
+        );
+
+        alert("Đăng nhập Admin thành công!");
+
+        window.location.href =
+    "../admin/dashboard.html";
+
+    }
+
+    // USER LOGIN
+
+    else if(email === userEmail &&
+            password === userPassword){
+
+        localStorage.setItem(
+            "isLogin",
+            "true"
+        );
+
+        localStorage.setItem(
+            "role",
+            "user"
+        );
+
+        localStorage.setItem(
+            "username",
+            "User"
+        );
+
+        alert("Đăng nhập thành công!");
+
+        window.location.href =
+            "index.html";
+
+    }
+
+    // ERROR
+
+    else{
+
+        alert("Sai email hoặc mật khẩu!");
+
+    }
+
+}
+
+</script>
+
+</body>
+
+</html>

@@ -1,0 +1,376 @@
+<!-- admin/dashboard.html -->
+
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Dashboard - Sang Nhất Hotel</title>
+
+    <link rel="stylesheet" href="assets/css/admin.css">
+
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+
+<div class="sidebar">
+
+    <div class="logo">
+
+        SANG NHẤT ADMIN
+
+    </div>
+
+    <ul>
+
+        <li class="active" onclick="showPage('dashboard')">
+
+            📊 Dashboard
+
+        </li>
+
+        <li onclick="showPage('rooms')">
+
+            🏨 Quản lý phòng
+
+        </li>
+
+        <li onclick="showPage('booking')">
+
+            📅 Đặt phòng
+
+        </li>
+
+        <li onclick="showPage('customers')">
+
+            👤 Khách hàng
+
+        </li>
+
+        <li onclick="showPage('payments')">
+
+            💳 Thanh toán
+
+        </li>
+
+        <li onclick="showPage('services')">
+
+            ⭐ Dịch vụ
+
+        </li>
+
+        <li onclick="logoutAdmin()">
+
+            🚪 Đăng xuất
+
+        </li>
+
+    </ul>
+
+</div>
+
+<!-- MAIN -->
+
+<div class="main-content">
+
+    <!-- TOPBAR -->
+
+    <div class="topbar">
+
+        <h1 id="page-title">
+
+            Dashboard
+
+        </h1>
+
+        <div class="admin-info">
+
+            👤 Admin
+
+        </div>
+
+    </div>
+
+    <!-- DASHBOARD -->
+
+    <div id="dashboard" class="page active-page">
+
+        <div class="cards">
+
+            <div class="card">
+
+                <h2>120</h2>
+
+                <p>Phòng</p>
+
+            </div>
+
+            <div class="card">
+
+                <h2>86</h2>
+
+                <p>Khách hàng</p>
+
+            </div>
+
+            <div class="card">
+
+                <h2>45</h2>
+
+                <p>Đặt phòng</p>
+
+            </div>
+
+            <div class="card">
+
+                <h2>320M</h2>
+
+                <p>Doanh thu</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- ROOMS -->
+
+    <div id="rooms" class="page">
+
+        <h2>Quản lý phòng</h2>
+
+        <table>
+
+            <tr>
+
+                <th>Mã phòng</th>
+                <th>Tên phòng</th>
+                <th>Giá</th>
+                <th>Trạng thái</th>
+
+            </tr>
+
+            <tr>
+
+                <td>R001</td>
+                <td>VIP Suite</td>
+                <td>2.500.000đ</td>
+                <td>Trống</td>
+
+            </tr>
+
+            <tr>
+
+                <td>R002</td>
+                <td>Deluxe Room</td>
+                <td>1.500.000đ</td>
+                <td>Đã đặt</td>
+
+            </tr>
+
+            <tr>
+
+                <td>R003</td>
+                <td>Standard Room</td>
+                <td>700.000đ</td>
+                <td>Trống</td>
+
+            </tr>
+
+        </table>
+
+    </div>
+
+    <!-- BOOKING -->
+
+    <div id="booking" class="page">
+
+        <h2>Danh sách đặt phòng</h2>
+
+        <table>
+
+            <tr>
+
+                <th>Khách hàng</th>
+                <th>Phòng</th>
+                <th>Ngày nhận</th>
+                <th>Ngày trả</th>
+
+            </tr>
+
+            <tr>
+
+                <td>Nguyễn Văn A</td>
+                <td>VIP Suite</td>
+                <td>12/05/2026</td>
+                <td>15/05/2026</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Trần Thị B</td>
+                <td>Deluxe</td>
+                <td>18/05/2026</td>
+                <td>20/05/2026</td>
+
+            </tr>
+
+        </table>
+
+    </div>
+
+    <!-- CUSTOMERS -->
+
+    <div id="customers" class="page">
+
+        <h2>Khách hàng</h2>
+
+        <table>
+
+            <tr>
+
+                <th>Tên</th>
+                <th>Email</th>
+                <th>SĐT</th>
+
+            </tr>
+
+            <tr>
+
+                <td>Nguyễn Văn A</td>
+                <td>a@gmail.com</td>
+                <td>0123456789</td>
+
+            </tr>
+
+            <tr>
+
+                <td>Trần Thị B</td>
+                <td>b@gmail.com</td>
+                <td>0987654321</td>
+
+            </tr>
+
+        </table>
+
+    </div>
+
+    <!-- PAYMENTS -->
+
+    <div id="payments" class="page">
+
+        <h2>Thanh toán</h2>
+
+        <table>
+
+            <tr>
+
+                <th>Mã hóa đơn</th>
+                <th>Khách hàng</th>
+                <th>Số tiền</th>
+
+            </tr>
+
+            <tr>
+
+                <td>HD001</td>
+                <td>Nguyễn Văn A</td>
+                <td>5.000.000đ</td>
+
+            </tr>
+
+            <tr>
+
+                <td>HD002</td>
+                <td>Trần Thị B</td>
+                <td>2.000.000đ</td>
+
+            </tr>
+
+        </table>
+
+    </div>
+
+    <!-- SERVICES -->
+
+    <div id="services" class="page">
+
+        <h2>Dịch vụ khách sạn</h2>
+
+        <div class="service-list">
+
+            <div class="service-item">
+
+                🏊 Hồ bơi cao cấp
+
+            </div>
+
+            <div class="service-item">
+
+                🍽 Buffet sáng
+
+            </div>
+
+            <div class="service-item">
+
+                🚗 Bãi đỗ xe
+
+            </div>
+
+            <div class="service-item">
+
+                📶 Wifi miễn phí
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<!-- JAVASCRIPT -->
+
+<script>
+
+function showPage(pageId){
+
+    const pages =
+        document.querySelectorAll(".page");
+
+    pages.forEach(page => {
+
+        page.classList.remove("active-page");
+
+    });
+
+    document
+        .getElementById(pageId)
+        .classList.add("active-page");
+
+    document
+        .getElementById("page-title")
+        .innerText = pageId;
+
+}
+
+function logoutAdmin(){
+
+    alert("Đăng xuất admin!");
+
+    window.location.href="../user/index.html";
+
+}
+
+</script>
+
+</body>
+
+</html>

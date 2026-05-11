@@ -1,0 +1,191 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI;
+}
+
+body{
+    background:#0f172a;
+    color:white;
+}
+
+/* HEADER */
+
+header{
+    width:100%;
+    height:80px;
+    background:#111827;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 60px;
+}
+
+.logo{
+    color:#00e5ff;
+    font-size:30px;
+    font-weight:bold;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:25px;
+}
+
+nav a:hover{
+    color:#00e5ff;
+}
+
+/* ROOM DETAIL */
+
+.room-detail{
+    width:90%;
+    margin:60px auto;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+}
+
+.main-image{
+    width:100%;
+    aspect-ratio:16/9;
+    object-fit:cover;
+    border-radius:25px;
+}
+
+.sub-images{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+    margin-top:20px;
+}
+
+.sub-images img{
+    width:100%;
+    aspect-ratio:16/9;
+    object-fit:cover;
+    border-radius:15px;
+}
+
+.room-info h1{
+    font-size:50px;
+    margin-bottom:20px;
+}
+
+.price{
+    color:#22c55e;
+    font-size:35px;
+    margin-bottom:25px;
+    font-weight:bold;
+}
+
+.description{
+    line-height:1.8;
+    color:#d1d5db;
+    margin-bottom:30px;
+}
+
+/* FEATURES */
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+    margin-bottom:40px;
+}
+
+.feature-box{
+    background:#1e293b;
+    padding:18px;
+    border-radius:15px;
+    text-align:center;
+}
+
+/* BUTTON */
+
+.book-btn{
+    padding:18px 40px;
+    border:none;
+    border-radius:50px;
+    background:#00e5ff;
+    font-size:18px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.book-btn:hover{
+    background:white;
+}
+
+/* RELATED */
+
+.related{
+    width:90%;
+    margin:80px auto;
+}
+
+.related h2{
+    text-align:center;
+    margin-bottom:40px;
+    font-size:40px;
+}
+
+.related-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.related-card{
+    background:#1e293b;
+    border-radius:20px;
+    overflow:hidden;
+    transition:0.4s;
+}
+
+.related-card:hover{
+    transform:translateY(-10px);
+}
+
+.related-card img{
+    width:100%;
+    aspect-ratio:16/9;
+    object-fit:cover;
+}
+
+.related-card h3{
+    padding:20px 20px 10px;
+    color:white;
+}
+
+.related-card p{
+    padding:0 20px 20px;
+    color:#00e5ff;
+}
+
+.room-link{
+    text-decoration:none;
+}
+
+footer{
+    background:#111827;
+    text-align:center;
+    padding:30px;
+    margin-top:50px;
+    color:#9ca3af;
+}
+
+@media(max-width:900px){
+
+    .room-detail{
+        grid-template-columns:1fr;
+    }
+
+    .related-grid{
+        grid-template-columns:1fr;
+    }
+
+}
