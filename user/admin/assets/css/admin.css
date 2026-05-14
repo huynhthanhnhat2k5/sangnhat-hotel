@@ -167,3 +167,27 @@ table th{
     }
 
 }
+@media screen and (max-width:768px){
+
+    .sidebar{
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+
+    .main-content{
+        margin-left: 0;
+        padding: 15px;
+    }
+
+    .cards{
+        grid-template-columns: 1fr;
+    }
+
+    table{
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+}

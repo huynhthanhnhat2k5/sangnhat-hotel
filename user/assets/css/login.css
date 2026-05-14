@@ -10,7 +10,64 @@ body{
     overflow:hidden;
     background:#0f172a;
 }
+/* =========================
+   HEADER
+========================= */
 
+header{
+    width:100%;
+    height:80px;
+    background:#111827;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:0 60px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    color:#00e5ff;
+    font-size:38px;
+    font-weight:bold;
+    letter-spacing:1px;
+}
+
+/* MENU */
+
+nav{
+    display:flex;
+    align-items:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:30px;
+    font-weight:500;
+    position:relative;
+    transition:0.3s;
+}
+
+nav a::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-6px;
+    width:0%;
+    height:2px;
+    background:#00e5ff;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#00e5ff;
+}
+
+nav a:hover::after{
+    width:100%;
+}
 /* BACKGROUND */
 
 .background{

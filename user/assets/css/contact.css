@@ -217,3 +217,15 @@ footer{
     }
 
 }
+@media screen and (max-width:768px){
+
+    .contact-container{
+        flex-direction: column;
+    }
+
+    .contact-info,
+    .contact-form{
+        width: 100%;
+    }
+
+}
