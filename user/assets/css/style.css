@@ -373,6 +373,65 @@ nav a:hover::after{
     background:white;
 }
 
+/* =========================
+   ABOUT PROJECT
+========================= */
+
+.about-project{
+    width:100%;
+    padding:80px 8%;
+    background:#111827;
+}
+
+.about-container{
+    display:flex;
+    gap:50px;
+    align-items:flex-start;
+}
+
+.about-images{
+    width:40%;
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+}
+
+.about-images img{
+    width:100%;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 10px 30px rgba(0,0,0,0.4);
+    transition:0.4s;
+}
+
+.about-images img:hover{
+    transform:translateY(-5px) scale(1.02);
+}
+
+.about-content{
+    width:60%;
+}
+
+.about-content h2{
+    font-size:55px;
+    font-weight:800;
+    margin-bottom:25px;
+    color:white;
+    line-height:1.2;
+}
+
+.about-content p{
+    font-size:18px;
+    line-height:1.9;
+    color:#d1d5db;
+    margin-bottom:25px;
+}
+
+.about-content h3{
+    font-size:40px;
+    margin:50px 0 30px;
+    color:#00e5ff;
+}
 
 /* LIST */
 
